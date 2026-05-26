@@ -24,16 +24,19 @@ These files were not previously released publicly, so they have been given an MI
 * award.c        - Strictly Hugos and Nebulas
 * dbsearch.c     - Provides numerical analytics to score works based on award performance
 * genlist.c      - Outputs a Hugo or Nebula listing, formatted exactly as by Evelyn C. Leeper in rec.arts.sf.written
+
 **NESFA**
 Structured around The NESFA Core Reading List of Fantasy and Science Fiction
 * nesfa.c        -
 * nesfasearch.c
 * gennesfa.c
+
 **PERSONAL**
 * als.c          - Very similar to nesfa.c; supports Locus
 * alsearch.c     - Similar to nesfasearch.c, but contains more analytics
 * genal.c        - Related to gennesfa.c
 * readlist.c     - Generates a reading list based on award scores. Includes Hugos, Nebulas, Locus, Campbell, Stoker, Clarke,
+
 **UTILITIES**
 * booksort.c     - sorts book titles
 
