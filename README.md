@@ -55,30 +55,32 @@ From late 1991 through 1992, I used the gopher tool to locate recent lists of Hu
 
 The Venn diagram overlap between readers of Speculative Fiction and UNIX developers is quite high, so in 1994 I took the spreadsheets, converted them to .csv files, introduced column delimiters, and made a set of Unix command-line tools to perform search and formatting of SF award information, and made those tools available for use on Unix systems at work. This repo is a copy of those tools.
 
+The bottomline motivation was to help find the top books to read. As such, there are numerous ways to slice and dice the data, with accompanying scoring algorithms. Again, it's utility has been eclipsed by more modern websites.
+
 # Usage
 
 ## books.c
 
 Novels only. Broadens the awards to include Clarke, Campbell, Locus, and Stoker
 
-[-a author]       (only authors with this substring)\n");
-[-A]              (list everything by author)\n");
-[-b]              (display buy list)\n");
-[-C]              (Critical Mode)\n");
-[-g ca|cl|hu|ne|lf|lh|ls|st]\n");
+    [-a author]       (only authors with this substring)\n");
+    [-A]              (list everything by author)\n");
+    [-b]              (display buy list)\n");
+    [-C]              (Critical Mode)\n");
+    [-g ca|cl|hu|ne|lf|lh|ls|st]\n");
                   (generate an award listing\n");
-[-l]              (dump the entire database sorted by score)\n");
-[-o]              (display own list)\n");
-[-p]              (print out database (debug))\n");
-[-P]              (Popular Mode)\n");
-[-r]              (display read list)\n");
-[-s]              (top Scoring authors)\n");
-[-t title]        (only titles with this substring)\n");
-[-w]              (winners only)\n");
-[-T threshold]    (use only scores > threshold)\n");
-[-y year]         (specific year only)\n");
+    [-l]              (dump the entire database sorted by score)\n");
+    [-o]              (display own list)\n");
+    [-p]              (print out database (debug))\n");
+    [-P]              (Popular Mode)\n");
+    [-r]              (display read list)\n");
+    [-s]              (top Scoring authors)\n");
+    [-t title]        (only titles with this substring)\n");
+    [-w]              (winners only)\n");
+    [-T threshold]    (use only scores > threshold)\n");
+    [-y year]         (specific year only)\n");
 
-Output decoder ring:
+    Output decoder ring:
         ca = Campbell
         cl = Clarke
         hu = Hugo
@@ -92,33 +94,34 @@ Output decoder ring:
 
 Strictly Hugos and Nebulas.
 
-        (void)printf("award [-y year]\n");
-        (void)printf("      [-t title]\n");
-        (void)printf("      [-a author]\n");
-        (void)printf("      [-h] (Hugos only)\n");
-        (void)printf("      [-n] (Nebulas only)\n");
-        (void)printf("      [-c (n|nv|nt|ss) or (!n|!nv|!nt|!ss) ]\n");
-        (void)printf("      [-w] (winners)\n");
-        (void)printf("      [-g] (1|2|3|4)\n");
-        (void)printf("            1 = Hugo Novel Nominees\n");
-        (void)printf("            2 = Hugo Short Fiction Nominees\n");
-        (void)printf("            3 = Nebula Novel Nominees\n");
-        (void)printf("            4 = Nebula Short Fiction Nominees\n");
+    [-y year]
+    [-t title]
+    [-a author]
+    [-h]             (Hugos only)
+    [-n]             (Nebulas only)
+    [-c (n|nv|nt|ss) or 
+        (!n|!nv|!nt|!ss)
+    [-w]             (winners only)
+    [-g] (1|2|3|4) 
+         1 = Hugo Novel Nominees
+         2 = Hugo Short Fiction Nominees
+         3 = Nebula Novel Nominees
+         4 = Nebula Short Fiction Nominees
 
 ## dbsearch.c
 
 Provides numerical analytics to score works based on award performance
 
-        printf("dbsearch [-s (n|w|h) (nominations|winners|heat)]\n");
-        printf("         [-c] (n|nv|nt|ss|!n|!nv|!nt|!ss)\n");
-        printf("         [-h] (Hugos only)\n");
-        printf("         [-n] (Nebulas only)\n");
-        printf("         [-a] Scan for author errors. <sensitivity> (0.0 - 2.0)\n");
-        printf("         [-t] Scan for title errors. <sensitivity> (0.0 - 2.0)\n");
-        printf("         [-m] Merge duplicate records\n");
-        printf("         [-b] Display year data\n");
-        printf("         [-d] (perform peak)\n");
-        printf("         [-y] Display titles under max age\n");
+    [-s (n|w|h) (nominations|winners|heat)]\n");
+    [-c] (n|nv|nt|ss|!n|!nv|!nt|!ss)\n");
+    [-h] (Hugos only)\n");
+    [-n] (Nebulas only)\n");
+    [-a] Scan for author errors. <sensitivity> (0.0 - 2.0)\n");
+    [-t] Scan for title errors. <sensitivity> (0.0 - 2.0)\n");
+    [-m] Merge duplicate records\n");
+    [-b] Display year data\n");
+    [-d] (perform peak)\n");
+    [-y] Display titles under max age\n");
 
 ## genlist.c
 
