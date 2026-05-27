@@ -46,7 +46,7 @@ This was a personal set of tools. Based on the NESFA toolset, it added additiona
 Experimental ISFDB1 prototype code. Generates some HTML, but no links
 * search.c       - Given an author substring, finds all matching canonical names. Useful for an initial search.
 * novels.c       - Can search for authors, titles, or authors
-* authors.c      - Outputs a non-HTML bibliography if given a canonical name
+* authors.c      - Outputs a non-HTML bibliography in John Wenn format if given a canonical name
 * exact_author.c - An update to authors.c, with output of some rudimentary HTML, but no links. This file became the basis for the ISFDB file a_exact_author.c
 * exact_title    - Given an exact title, author, year, and type, outputs a line from the database, which contains the exact title, author, year, and type. Of dubious utility, likely a dbase debugging tool.
 
