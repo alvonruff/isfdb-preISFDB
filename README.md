@@ -2,7 +2,8 @@
 
 This repo contains the so-called "awards database" that preceded the original ISFDB. This consisted predominately of a set of
 command line tools that ran on Unix, but also includes a prototype bibliographic tool that emitted some limited HTML. 
-These files were thought lost, but were found on a hard drive from an old non-functional Fujitsu Transmeta laptop.
+These files were thought lost, but were found on a hard drive from an old non-functional Fujitsu Transmeta laptop. Work on these
+files began sometime in 1993, with copyright headers added in 1994, and the newest information in the dbase files from early 1995.
 
 The files are presented as-was, but with some minor changes so that they can be compiled and run on modern Linux systems:
 * Addition of function declarations
