@@ -101,6 +101,122 @@ The bottomline motivation was to help find the top books to read. As such, there
 
 # Usage
 
+## award.c
+
+Operates strictly on Hugo and Nebula data.
+
+    [-y year]                    (Display works from a particular year)
+    [-t title]                   (Display titles containing the given substring)
+    [-a author]                  (Display works by authors containing the given substring)
+    [-h]                         (Display Hugos only)
+    [-n]                         (Display Nebulas only)
+    [-c (n|nv|nt|ss) or 
+        (!n|!nv|!nt|!ss)         (Display - or not - fiction by length)
+         n  = Novel
+         nv = Novella
+         nt = Novelette
+         ss = Sorth Story
+    [-w]                         (Display winners only)
+    [-g] (1|2|3|4)               (Display a given award level)
+         1 = Hugo Novel Nominees
+         2 = Hugo Short Fiction Nominees
+         3 = Nebula Novel Nominees
+         4 = Nebula Short Fiction Nominees
+
+## dbsearch.c
+
+Provides numerical analytics to score works based on award performance. The concept of "heat" was the first appearance of scoring authors based on how recent their award record occured.
+
+    [-s (n|w|h)           (nominations|winners|heat)]
+    [-c] (n|nv|nt|ss|!n|!nv|!nt|!ss)
+    [-h]                  (Hugos only)
+    [-n]                  (Nebulas only)
+    [-a]                  (Scan for author errors. <sensitivity> (0.0 - 2.0))
+    [-t]                  (Scan for title errors. <sensitivity> (0.0 - 2.0))
+    [-m]                  (Merge duplicate records)
+    [-b]                  (Display year data)
+    [-d]                  (Perform peak)
+    [-y]                  (Display titles under max age)
+
+## genlist.c
+
+Outputs a Hugo or Nebula listing, formatted exactly as by Evelyn C. Leeper in rec.arts.sf.written
+
+    [-c] (l | s)          (Display long/short fiction)
+    [-h]                  (Display Hugos only)
+    [-n]                  (Display Nebulas only)
+    [-b]                  (Display works which won both awards)
+
+## nesfa.c
+
+These tools were structured around The NESFA Core Reading List of Fantasy and Science Fiction. The dbase file also contained Hugo/Nebula info. This particular tool only used the award side of things, and was never meant to be user facing, as it simply dumps database records that matches the search criteria.
+
+    [-b]                  (Display works which won both awards)
+    [-y year]             (Display works from a given year)
+    [-t title]            (Display works with the title substring)
+    [-a author]           (Display works with the author substring)
+    [-h]                  (Hugos only)
+    [-n]                  (Nebulas only) 
+    [-c (n|nv|nt|ss) or 
+        (!n|!nv|!nt|!ss)  (Search by work length)
+    [-w]                  (Display winners only)
+
+## nesfasearch.c
+
+This tool pulls from the awards and NESFA reading list, and outputs results in the NESFA Reading List format, including the NESFA encodings for the source location (See: https://www.nesfa.org/awards/yearly-hugo-lists/the-nesfa-core-reading-list-of-fantasy-and-science-fiction/)
+
+    [-s (n|w|h)           (nominations|winners|heat)]
+    [-c] (n|nv|nt|ss|!n|!nv|!nt|!ss)
+    [-h]                  (Hugos only)
+    [-n]                  (Nebulas only)
+    [-a]                  (Scan for author errors. <sensitivity> (0.0 - 2.0))
+    [-t]                  (Scan for title errors. <sensitivity> (0.0 - 2.0))
+    [-b]                  (Perform title sort)
+
+## gennesfa.c
+
+    [-c (l|s) ]                       (long/short fiction)
+    [-w (a|b|c|d|e|f|g|h|z|n|N|H)]    (Search by NESFA encodings)
+    [-h]                              (Hugos only)
+    [-n]                              (Nebulas only)
+
+## als.c
+
+Very similar to nesfa.c, but adds supports for Locus
+
+    [-n]                              (Nebulas only)
+    [-y year]                         (Display works from a given year)
+    [-t title]                        (Display works with the title substring)
+    [-a author]                       (Display works with the author substring)
+    [-h]                              (Hugos only)
+    [-n]                              (Nebulas only)
+    [-c (n|nv|nt|ss) or (!n|!nv|!nt|!ss) ]
+    [-w]                              (Winners only)
+
+## alsearch.c
+
+Updated version of nesfasearch.c, but containing more analytics.    
+
+    [-s (n|w|h) (nominations|winners|heat)]\n");
+    [-a] <sensitivity> (0.0 - 2.0)\n");
+    [-b] (perform title sort)\n");
+    [-t] <sensitivity> (0.0 - 2.0)\n");
+    [-c] (n|nv|nt|ss|!n|!nv|!nt|!ss)\n");
+    [-h] (Hugos only)\n");
+    [-n] (Nebulas only)\n");
+
+## genal.c
+
+Updated version of gennesfa.c
+
+## readlist.c
+
+Generates a reading list based on award scores. Includes Hugos, Nebulas, Locus, Campbell, Stoker, Clarke,
+
+## booksort.c
+
+Utility that alphabetizes book titles, using standard rules of ignoring leading a, A, an, An, the, The
+
 ## books.c
 
 Novels only. Broadens the awards to include Clarke, Campbell, Locus, and Stoker
@@ -110,7 +226,7 @@ Novels only. Broadens the awards to include Clarke, Campbell, Locus, and Stoker
     [-b]              (display buy list)\n");
     [-C]              (Critical Mode)\n");
     [-g ca|cl|hu|ne|lf|lh|ls|st]\n");
-                  (generate an award listing\n");
+                      (generate an award listing\n");
     [-l]              (dump the entire database sorted by score)\n");
     [-o]              (display own list)\n");
     [-p]              (print out database (debug))\n");
@@ -131,100 +247,3 @@ Novels only. Broadens the awards to include Clarke, Campbell, Locus, and Stoker
         lh = Locus Horror
         ls = Locus Science Fiction
         st = Stoker
-
-## award.c
-
-Strictly Hugos and Nebulas.
-
-    [-y year]
-    [-t title]
-    [-a author]
-    [-h]             (Hugos only)
-    [-n]             (Nebulas only)
-    [-c (n|nv|nt|ss) or 
-        (!n|!nv|!nt|!ss)
-    [-w]             (winners only)
-    [-g] (1|2|3|4) 
-         1 = Hugo Novel Nominees
-         2 = Hugo Short Fiction Nominees
-         3 = Nebula Novel Nominees
-         4 = Nebula Short Fiction Nominees
-
-## dbsearch.c
-
-Provides numerical analytics to score works based on award performance
-
-    [-s (n|w|h) (nominations|winners|heat)]\n");
-    [-c] (n|nv|nt|ss|!n|!nv|!nt|!ss)\n");
-    [-h] (Hugos only)\n");
-    [-n] (Nebulas only)\n");
-    [-a] Scan for author errors. <sensitivity> (0.0 - 2.0)\n");
-    [-t] Scan for title errors. <sensitivity> (0.0 - 2.0)\n");
-    [-m] Merge duplicate records\n");
-    [-b] Display year data\n");
-    [-d] (perform peak)\n");
-    [-y] Display titles under max age\n");
-
-## genlist.c
-
-Outputs a Hugo or Nebula listing, formatted exactly as by Evelyn C. Leeper in rec.arts.sf.written
-
-        printf("genlist  [-c] (l | s) (long/short fiction)\n");
-        printf("         [-h] (Hugos only)\n");
-        printf("         [-n] (Nebulas only)\n");
-        printf("         [-b] (won Both)\n");
-
-## nesfa.c
-
-Structured around The NESFA Core Reading List of Fantasy and Science Fiction
-
-## nesfasearch.c
-## gennesfa.c
-
-## als.c
-Very similar to nesfa.c; supports Locus
-
-        (void)printf("award [-y year]\n");
-        (void)printf("      [-t title]\n");
-        (void)printf("      [-a author]\n");
-        (void)printf("      [-h] (Hugos only)\n");
-        (void)printf("      [-n] (Nebulas only)\n");
-        (void)printf("      [-c (n|nv|nt|ss) or (!n|!nv|!nt|!ss) ]\n");
-        (void)printf("      [-w] (winners)\n");
-
-        a = WEBDAN
-        b = ASFANTH
-        c = SFHALL
-        d = HEALY
-        e = GROFF
-        f = ASIMOV
-        g = HARTWELL
-        h = HUGO
-        H = HUGO WIN
-        i = NESFA
-        n = NEBULA
-        N = NEBULA WIN
-        j = ASSFS
-        l = LOCUS
-
-## alsearch.c
-Similar to nesfasearch.c, but contains more analytics       
-
-        printf("dbsearch [-s (n|w|h) (nominations|winners|heat)]\n");
-        printf("         [-a] <sensitivity> (0.0 - 2.0)\n");
-        printf("         [-b] (perform title sort)\n");
-        printf("         [-t] <sensitivity> (0.0 - 2.0)\n");
-        printf("         [-c] (n|nv|nt|ss|!n|!nv|!nt|!ss)\n");
-        printf("         [-h] (Hugos only)\n");
-        printf("         [-n] (Nebulas only)\n");
-
-## genal.c
-Related to gennesfa.c
-
-## readlist.c
-
-Generates a reading list based on award scores. Includes Hugos, Nebulas, Locus, Campbell, Stoker, Clarke,
-
-## booksort.c
-
-Utility that alphabetizes book titles, using standard rules of ignoring leading a, A, an, An, the, The
