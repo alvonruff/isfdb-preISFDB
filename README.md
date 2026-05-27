@@ -16,36 +16,38 @@ These files were not previously released publicly, so they have been given an MI
 
 # Contents
 
-## books
-* books.c      - General purpose tool, able to output a wide variety of award information, but limited to novels.
-
 ## awards
 **GENERAL**
-* award.c        - Strictly Hugos and Nebulas
-* dbsearch.c     - Provides numerical analytics to score works based on award performance
-* genlist.c      - Outputs a Hugo or Nebula listing, formatted exactly as by Evelyn C. Leeper in rec.arts.sf.written
+This was the first set of online tools created.
+* award.c        - Provides a variety of search terms for the Hugos and Nebulas.
+* dbsearch.c     - Provides numerical analytics to score works based on award performance.
+* genlist.c      - Outputs a Hugo or Nebula listing, formatted exactly as by Evelyn C. Leeper in rec.arts.sf.written.
 
 **NESFA**
-Structured around The NESFA Core Reading List of Fantasy and Science Fiction
-* nesfa.c        -
-* nesfasearch.c
-* gennesfa.c
+This was the next set of tools. This combines the Hugos and Nebulas with The NESFA Core Reading List of Fantasy and Science Fiction.
+* nesfa.c        - Provides a variety of search terms for Hugos/Nebula/NESFA.
+* nesfasearch.c  - Provides numerical analytics to score works based on award performance.
+* gennesfa.c     - Outputs a NESFAlisting, formatted exactly as by the Core Reading List.
 
 **PERSONAL**
-* als.c          - Very similar to nesfa.c; supports Locus
+This was a personal set of tools. Based on the NESFA toolset, it added additional awards: Locus, PK Dick, Clarke, and World Fantasy Award.
+* als.c          - Very similar to nesfa.c, but now focused on awards again.
 * alsearch.c     - Similar to nesfasearch.c, but contains more analytics
-* genal.c        - Related to gennesfa.c
-* readlist.c     - Generates a reading list based on award scores. Includes Hugos, Nebulas, Locus, Campbell, Stoker, Clarke,
+* genal.c        - Similar to gennesfa.c, but awards-centric
+* readlist.c     - Generates a reading list based on award scores.
 
 **UTILITIES**
-* booksort.c     - sorts book titles
+* booksort.c     - sorts book titles according to leading A, An, The rules.
+
+## books
+* books.c      - General purpose tool, able to output a wide variety of award information, but limited to novels. Supported Hugos, Nebulas, Locus Poll, Campbell, Stoker, Clarke, PK Dick, and World Fantasy Award. This code was clearly being expanded to support other works like short fiction, but there are no short fiction entries in the provided dbase file.
 
 ## SFdbase
 Experimental ISFDB1 prototype code. Generates some HTML, but no links
-* search.c       - Given an author substring, finds all matching canonical names
+* search.c       - Given an author substring, finds all matching canonical names. Useful for an initial search.
 * novels.c       - Can search for authors, titles, or authors
 * authors.c      - Outputs a non-HTML bibliography if given a canonical name
-* exact_author.c - Nearly the same as authors.c, but output rudimentary HTML, but no links
+* exact_author.c - An update to authors.c, with output of some rudimentary HTML, but no links. This file became the basis for the ISFDB file a_exact_author.c
 * exact_title    - Given an exact title, author, year, and type, outputs a line from the database, which contains the exact title, author, year, and type. Of dubious utility, likely a dbase debugging tool.
 
 # Background
