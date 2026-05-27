@@ -3,7 +3,7 @@
 This repo contains the so-called "awards database" that preceded the original ISFDB. This consisted predominately of a set of
 command line tools that ran on Unix, but also includes a prototype bibliographic tool that emitted some limited HTML. 
 These files were thought lost, but were found on a hard drive from an old non-functional Fujitsu Transmeta laptop. Work on these
-files began sometime in 1993, with copyright headers added in 1994, and the newest information in the dbase files from early 1995.
+files began sometime in 1993, with copyright headers added in 1994, and the newest information added to the dbase files in early 1995 (Hugo nominations).
 
 The files are presented as-was, but with some minor changes so that they can be compiled and run on modern Linux systems:
 * Addition of function declarations
@@ -209,11 +209,19 @@ Updated version of nesfasearch.c, but containing more analytics.
 
 ## genal.c
 
-Updated version of gennesfa.c
+Updated version of gennesfa.c converted to use awards instead of the NESFA reading list. Supported awards include: Locus, Clarke, World Fantasy, PK Dick, Hugos, Nebulas.
+
+    [-c (l|s) ]                       (long/short fiction)
+    [-w (c|w|p|h|H|n|N|L|P|W)]        (award)
 
 ## readlist.c
 
 Generates a reading list based on award scores. Includes Hugos, Nebulas, Locus, Campbell, Stoker, Clarke,
+
+    [-y year]                         (Display works from a year)      
+    [-t title]                        (Display works containing the title)
+    [-a author]                       (Display works containing the author)
+    [-w] (winners)                    (Display winners only)
 
 ## booksort.c
 
