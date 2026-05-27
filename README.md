@@ -10,7 +10,8 @@ The files are presented as-was, but with some minor changes so that they can be 
 * Addition of a few includes, mostly <string.h>, <unistd.h>, and <stdlib.h>
 * Conversion from lex/yacc to flex/bison. These changes were restricted to Makefile changes.
 * Filesystem layout was slightly altered, as it relied on directory structures on machines that no longer exist.
-* 1994 was a different time, so email address and phone numbers have been redacted.
+* Some slight mods were made to OPTARGS as modern libraries are more pedantic.
+* 1994 was a different time, so email addresses and phone numbers have been redacted.
 
 The utility of the tools has been greatly superceded by the ISFDB and sfadb, and are shown here for archeological purposes.
 These files were not previously released publicly, so they have been given an MIT license.
@@ -176,6 +177,8 @@ This tool pulls from the awards and NESFA reading list, and outputs results in t
     [-b]                  (Perform title sort)
 
 ## gennesfa.c
+
+Outputs a listing, formatted exactly as by the NESFA Reading List format.
 
     [-c (l|s) ]                       (long/short fiction)
     [-w (a|b|c|d|e|f|g|h|z|n|N|H)]    (Search by NESFA encodings)
