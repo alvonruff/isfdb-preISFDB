@@ -13,7 +13,7 @@
 #include <unistd.h>
 
 #define DBASE "dbases/als.dbase"
-#define OPTARGS "hn:wc:"
+#define OPTARGS "hn:w:c:"
 #define CURRENT_YEAR 1994
 
 #define SHORT_STORY     0x0001
