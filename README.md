@@ -89,7 +89,8 @@ Example output from authors.c:
     Blind Alley (1945)
     The Mule (1945)
     ... and so on ...
-    
+
+This was the starting point for the ISFDB, as data missing from existing John Wenn bibliographies could be added until parity was reached.
 
 # Background
 While a student at the University of Illinois in the late 80s, I had taken two semesters of writer’s workshops, and had been fully indoctrinated into the realm of academic literature, along with an accompanying low regard for genre fiction. On the other hand, I had been a member of the Science Fiction Book Club since 1970, and occasionally forgot to send in the monthly slip indicating my rejection of the automatic monthly selection, so I would sometimes receive a surprise book. In August 1991, I had once again forgotten to send in the rejection slip, and received a copy of Gardner Dozois’ *The Year's Best Science Fiction: Eighth Annual Collection*. Instead of sending it back, I decided to read these stories while on the exercise bike, and found myself surprised at the overall level of quality of the stories.
