@@ -50,6 +50,46 @@ Experimental ISFDB1 prototype code. Generates some HTML, but no links
 * exact_author.c - An update to authors.c, with output of some rudimentary HTML, but no links. This file became the basis for the ISFDB file a_exact_author.c
 * exact_title    - Given an exact title, author, year, and type, outputs a line from the database, which contains the exact title, author, year, and type. Of dubious utility, likely a dbase debugging tool.
 
+Example output from authors.c:
+
+    ./authors -a "Isaac Asimov"
+
+    Asimov, Isaac     (U.S.S.R., 1/2/1920-4/6/1992)
+
+    Series:
+        Trantorian Empire
+                Pebble in the Sky (1950)
+                The Stars Like Dust (1951)
+
+        Foundation
+                Foundation (1951)
+                Foundation and Empire (1952)
+                Second Foundation (1953)
+                Foundation's Edge (1982)
+                Foundation and Earth (1986)
+                Prelude to Foundation (1988)
+
+        The Positronic Robot Stories
+                The Caves of Steel (1954)
+                The Naked Sun (1957)
+                The Robots of Dawn (1983)
+                Robots and Empire (1985)
+
+    Novels:
+    I, Robot (1950) [C]
+    The End of Eternity (1955)
+    The Gods Themselves (1972)
+
+    Short Fiction:
+    Trends (1939)
+    Strange Playfellow (1940)
+    Liar! (1941)
+    Nightfall (1941)
+    Blind Alley (1945)
+    The Mule (1945)
+    ... and so on ...
+    
+
 # Background
 While a student at the University of Illinois in the late 80s, I had taken two semesters of writer’s workshops, and had been fully indoctrinated into the realm of academic literature, along with an accompanying low regard for genre fiction. On the other hand, I had been a member of the Science Fiction Book Club since 1970, and occasionally forgot to send in the monthly slip indicating my rejection of the automatic monthly selection, so I would sometimes receive a surprise book. In August 1991, I had once again forgotten to send in the rejection slip, and received a copy of Gardner Dozois’ *The Year's Best Science Fiction: Eighth Annual Collection*. Instead of sending it back, I decided to read these stories while on the exercise bike, and found myself surprised at the overall level of quality of the stories.
 
