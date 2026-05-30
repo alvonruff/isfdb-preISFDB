@@ -29,7 +29,7 @@ This was the first set of online tools created.
 This was the next set of tools. This combines the Hugos and Nebulas with The NESFA Core Reading List of Fantasy and Science Fiction.
 * nesfa.c        - Provides a variety of search terms for Hugos/Nebula/NESFA.
 * nesfasearch.c  - Provides numerical analytics to score works based on award performance.
-* gennesfa.c     - Outputs a NESFAlisting, formatted exactly as by the Core Reading List.
+* gennesfa.c     - Outputs a NESFA listing, formatted exactly as by the Core Reading List.
 
 **PERSONAL**
 This was a personal set of tools. Based on the NESFA toolset, it added additional awards: Locus, PK Dick, Clarke, and World Fantasy Award.
@@ -49,7 +49,7 @@ Experimental ISFDB1 prototype code. Generates some HTML, but no links
 * search.c       - Given an author substring, finds all matching canonical names. Useful for an initial search.
 * novels.c       - Can search for authors, titles, or authors
 * authors.c      - Outputs a non-HTML bibliography in John Wenn format if given a canonical name
-* exact_author.c - An update to authors.c, with output of some rudimentary HTML, but no links. This file became the basis for the ISFDB file a_exact_author.c
+* exact_author.c - An update to authors.c, with output of some rudimentary HTML, but no links. This file became the basis for the ISFDB file exact_author.c
 * exact_title    - Given an exact title, author, year, and type, outputs a line from the database, which contains the exact title, author, year, and type. Of dubious utility, likely a dbase debugging tool.
 
 Example output from authors.c:
