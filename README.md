@@ -100,7 +100,7 @@ From late 1991 through 1992, I used the gopher tool to locate recent lists of Hu
 
 The Venn diagram overlap between readers of Speculative Fiction and UNIX developers is quite high, so in 1993 I took the spreadsheets, converted them to .csv files, introduced column delimiters, and made a set of Unix command-line tools to perform search and formatting of SF award information, and made those tools available for use on Unix systems at work. This repo is a copy of those tools.
 
-The bottomline motivation was to help find the top books to read. As such, there are numerous ways to slice and dice the data, with accompanying scoring algorithms. Again, it's utility has been eclipsed by more modern websites.
+The bottomline motivation was to help find the top books to read. As such, there are numerous ways to slice and dice the data, with accompanying scoring algorithms. Again, its utility has been eclipsed by more modern websites.
 
 # Usage
 
